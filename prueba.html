@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Imágenes dinámicas</title>
+  <style>
+    .contenedor {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .imagen {
+      display: none;
+      margin-top: 10px;
+      max-width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <button>Mostrar imagen</button>
+    <img class="imagen" src="https://via.placeholder.com/400x200?text=Imagen+1" alt="Imagen 1">
+  </div>
+
+  <div class="contenedor">
+    <button>Mostrar imagen</button>
+    <img class="imagen" src="https://via.placeholder.com/400x200?text=Imagen+2" alt="Imagen 2">
+  </div>
+
+  <div class="contenedor">
+    <button>Mostrar imagen</button>
+    <img class="imagen" src="https://via.placeholder.com/400x200?text=Imagen+3" alt="Imagen 3">
+  </div>
+
+  <script>
+    // Obtener todos los botones
+    const botones = document.querySelectorAll('.contenedor button');
+
+    botones.forEach(boton => {
+      boton.addEventListener('click', () => {
+        const img = boton.nextElementSibling; // agarra la imagen justo después del botón
+        if (img.style.display === 'none' || img.style.display === '') {
+          img.style.display = 'block';
+          boton.textContent = 'Ocultar imagen';
+        } else {
+          img.style.display = 'none';
+          boton.textContent = 'Mostrar imagen';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

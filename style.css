@@ -1,0 +1,189 @@
+/* General */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2,h3,h4 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+a {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background-size: 200%; /* Doble tamaño para que se pueda mover */
+    background-position: left;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.5s ease; /* Esto sí se puede animar */
+  }
+
+  a:hover {
+    background-position: right; /* Se mueve el fondo y se ve el efecto */
+  }
+
+/* Contenedor principal */
+.Contenedor {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+div {
+    text-align: center;
+    margin: 10px;
+}
+
+/* Input de archivo */
+input[type="file"] {
+    display: none;
+}
+
+/* Botón personalizado para subir archivos */
+.custom-file-upload label {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background-size: 300%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease, background-position 0.8s ease, transform 0.2s ease;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-file-upload label:hover {
+    background-position: right;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Botones generales */
+button {
+    display: block;
+    margin: 5px auto;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background-size: 300%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease, background-position 0.8s ease, transform 0.2s ease;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-position: right;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Elementos destacados */
+#dont-follow-you div {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+}
+
+/* Separador */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+.warn {
+    font-size: 10px;
+    color: #dc3545;
+    font-weight: bold;
+    text-align: center;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+}
+.Pasos {
+    width: 60%;
+    margin: 0 auto;
+}
+.Pasos > * {
+    text-align: left;
+    margin: 0 auto;
+}
+img {
+    display: block;
+    width: 100%;
+}
+.mostrarBoton {
+    display: inline;
+    align-self: flex-start;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.imagen-wrapper {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+}
+
+.visible {
+    max-height: 900px; /* o lo que necesites */
+}
+.Pasos p {
+    margin: 10px;
+}
+.secciones {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+.destacado {
+    animation: resaltar 1s ease;
+}
+@keyframes resaltar {
+    0% { background-color: rgb(197, 0, 115); }
+    100% { background-color: transparent; }
+  }
+.Pasos h3 {
+    font-weight: 1000;
+}

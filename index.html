@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Followers and Follows</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="comparacion.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="comparacion.html">Comparar</a>
+        <a href="manual.html">Manual de usuario</a>
+    </div>
+    <h1>Ver quien no te sigue</h1>
+    <hr>
+    <div class="Contenedor">
+        <div id="followers" >
+            <h2>Seguidores</h2>
+            <div class="custom-file-upload">
+                <label for="followersFile">Subir archivo de seguidores</label>
+                <input type="file" id="followersFile" accept=".json">
+            </div>
+        </div>
+        
+        <div id="follows">
+            <h2>Seguidos</h2>
+            <div class="custom-file-upload">
+                <label for="followingFile">Subir archivo de seguidos</label>
+                <input type="file" id="followingFile" accept=".json">
+            </div>
+        </div>
+    </div>
+    
+    <br>
+
+     <!-- Script de carga -->
+     <script type="module" src="script.js"></script>
+
+    
+</body>
+</html>
